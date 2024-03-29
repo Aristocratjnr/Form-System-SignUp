@@ -1,20 +1,20 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
-const config = {
+const config: Config = {
   darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1500px",
       },
     },
     extend: {
@@ -74,7 +74,10 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [
+    require("tailwindcss-animate"), // Tailwind CSS Animate plugin
+    require("daisyui"), // Daisy UI plugin
+  ],
+};
 
-export default config
+export default config;

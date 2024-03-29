@@ -67,6 +67,7 @@ export const RegistrationForm = ({
 
   return (
     <Form {...form}>
+      <center><h2 className="text-2xl font-bold mb-4">Form Management System</h2></center> {/* Title added here */}
       <div>{state?.message}</div>
       <form
         ref={formRef}
@@ -140,17 +141,13 @@ export const RegistrationForm = ({
     <FormItem>
       <FormLabel>Date of Birth</FormLabel>
       <FormControl>
-        {/* Convert the Date object to a string */}
+        {/* Use defaultValue instead of value */}
         <Input
           type="date"
           placeholder=""
-          // Ensure field.value is a string
-          value={field.value instanceof Date ? field.value.toISOString().split('T')[0] : ''}
-          // Pass the rest of the field properties
-          onChange={field.onChange}
-          onBlur={field.onBlur}
-          name={field.name}
-          ref={field.ref}
+          defaultValue={field.value instanceof Date ? field.value.toISOString().split('T')[0] : ''}
+          // Register the field with React Hook Form
+          {...form.register('dob')}
         />
       </FormControl>
       <FormDescription>Your date of birth.</FormDescription>
@@ -181,13 +178,15 @@ export const RegistrationForm = ({
               <FormControl>
                 <Input type="textarea" {...field} />
               </FormControl>
-              <FormDescription>Provide a description.</FormDescription>
+              <FormDescription>Provide your details.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
         {/* End of Additional Fields */}
-        <Button type="submit">Submit</Button>
+        <center><Button type="submit">Submit</Button></center>
+
+        <center><footer>Copyright@2024  InkrisCompass.</footer></center>
       </form>
     </Form>
   );
