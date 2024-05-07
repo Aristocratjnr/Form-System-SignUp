@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "InkrisPilot",
+  title: "Form Management System",
   description: "Form Management System",
 };
 
