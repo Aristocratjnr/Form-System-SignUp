@@ -20,6 +20,7 @@ import { z } from "zod";
 
 import { schema } from "./registrationSchema";
 
+'use strict';
 export const RegistrationForm = ({
   onDataAction,
   onFormAction,
@@ -186,7 +187,7 @@ export const RegistrationForm = ({
         {/* End of Additional Fields */}
         <center><Button type="submit">Submit</Button></center>
 
-        <center><footer>Copyright@2024  InkrisCompass.</footer></center>
+        <center><footer>Copyright@2024 Aristocratjnr.</footer></center>
       </form>
     </Form>
   );
