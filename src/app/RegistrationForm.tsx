@@ -68,7 +68,7 @@ export const RegistrationForm = ({
 
   return (
     <Form {...form}>
-      <center><h2 className="text-2xl font-bold mb-4">Form Management System</h2></center> {/* Title added here */}
+      <center><h2 className="text-3xl font-bold mb-4">Form Management System</h2></center><br /> {/* Title added here */} 
       <div>{state?.message}</div>
       <form
         ref={formRef}
@@ -187,7 +187,7 @@ export const RegistrationForm = ({
         {/* End of Additional Fields */}
         <center><Button type="submit">Submit</Button></center>
 
-        <center><footer>Copyright@2024 Aristocratjnr.</footer></center>
+        <center><footer><code>Copyright@2024 Aristocratjnr.</code></footer></center>
       </form>
     </Form>
   );
